@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header con menú <ul> con <li> con hipervínculos dentro-->
+    <header>
+      <menu>
+        <ul class="lista">
+          <li class="lista__li">
+            <a href="#section1" title="principal"
+              ><img
+                class="fotoPerfil"
+                src="img/fotoperfil.png"
+                alt="fotoPerfil"
+            /></a>
+          </li>
+          <li class="lista__li">
+            <a class="lista__a" href="#section2" title="sobre mi" id="menu1"
+              >Sobre mi</a
+            >
+          </li>
+          <li class="lista__li">
+            <a class="lista__a" href="#section3" title="proyectos" id="menu2"
+              >Proyectos</a
+            >
+          </li>
+          <li class="lista__li">
+            <a class="lista__a" href="#section4" title="formación" id="menu3"
+              >Formación</a
+            >
+          </li>
+          <li class="lista__li">
+            <a class="lista__a" href="#section5" title="habilidades" id="menu4"
+              >Habilidades</a
+            >
+          </li>
+          <li class="lista__li">
+            <a class="lista__a" href="#section6" title="contacto" id="menu5"
+              >Contacto</a
+            >
+          </li>
+          <li class="lista__li--fantasma">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+        </ul>
+      </menu>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- sección1 -->
+      <section class="section section1" id="section1">
+        <h1>ANDRES RODRÍGUEZ</h1>
+        <p class="section1__texto1">
+          Bienvenidos a mi portfolio. Aquí encontrareis todo lo relacionado con
+          mi labor como <span class="span0">programador frontend</span> y
+          <span class="span0">diseñador UX/UI</span>
+        </p>
+        <p class="section1__texto2">
+          Si necesitais obtener más información podeis contactarme en
+          <span class="span1">andresbonxe@gmail.com</span>
+        </p>
+        <div class="section1__botones">
+          <button class="botonCv">Descarga mi CV</button
+          ><img src="img/instagram.png" alt="instagram" />
+          <img src="img/github.png" alt="github" />
+          <img src="img/link.png" alt="linkedin" />
+        </div>
+      </section>
+      <!-- sección2 -->
+      <section class="section section2" id="section2">
+        <h2>Sobre mi</h2>
+        <p class="section2__texto1">
+          Una vez graduado en Historia del Arte, elegí el camino de la docencia
+          en la educación secundaria en la especialidad de Geografía e
+          Historia.Tras unos años en el sector, la situación laboral se vuelve
+          bastante compleja y decido explorar nuevas alternativas.
+        </p>
+        <p class="section2__texto2">
+          Tras meditarlo me decantanto por una opción que auna mis inquietudes
+          con un panorama laboral aparentemente repleto de posibilidades: el
+          Diseño Web. Concretamente decido enfocarme en la programación frontend
+          y diseño UX/UI, cuyo apartado visual, creativo y en relación con el
+          comportamiento humano, encaja a la perfección con mis gustos y
+          aptitudes.
+        </p>
+        <p class="section2__texto3">
+          Actualmente sigo formandome y ampliando mis conocimientos de forma
+          autodidacta y a través de diferentes cursos al tiempo que busco
+          alternativas laborales.
+        </p>
+      </section>
+      <!-- sección3 -->
+      <section class="section section3" id="section3">
+        <div>
+          <h2 class="section3__h2">Proyectos</h2>
+        </div>
+        <div class="proyecto" id="proyecto">
+          <i class="fa-regular fa-circle-left flecha"></i>
+          <div class="proyecto__interior">
+            <img
+              class="imagenProyecto"
+              src="img/proyecto1.png"
+              alt="proyecto1"
+              loading="lazy"
+            />
+            <h3>BAMBAM: app de turismo</h3>
+            <p class="section3__texto1" id="texto1">
+              Prototipo de aplicación que pretendía satisfacer la necesidad de
+              aquellas personas que buscaban una forma diferente de viajar. Para
+              ello se utilizó la metodología del "design thinking".
+            </p>
+            <div class="tecnologias">
+              <img src="img/figma.png" alt="figma" loading="lazy" />
+              <img src="img/whimsical.png" alt="whimsical" loading="lazy" />
+              <img src="img/maze.jpeg" alt="maze" loading="lazy" />
+              <img src="img/zeplin.png" alt="zeplin" loading="lazy" />
+              <img src="img/miro.jpeg" alt="miro" loading="lazy" />
+            </div>
+          </div>
+          <i class="fa-regular fa-circle-right flecha"></i>
+        </div>
+        <div class="divfantasma"></div>
+      </section>
+      <!-- sección 4 -->
+      <section class="section section4" id="section4">
+        <h2>Formación</h2>
+        <div>
+          <h3>GRADO EN HISTORIA DEL ARTE</h3>
+          <p>Universidad de Santiago de Compostela / Universidad de Sevilla</p>
+        </div>
+        <div>
+          <h3>MÁSTER EN FORMACIÓN DEL PROFESORADO</h3>
+          <p>Universidad de Oviedo</p>
+        </div>
+        <div>
+          <h3>MASTER EN DISEÑO WEB Y UX/UI</h3>
+          <p>Centro de Estudios de Innovación Diseño y Marketing</p>
+        </div>
+      </section>
+      <!-- sección 5 -->
+      <section class="section section5" id="section5">
+        <h2>Habilidades</h2>
+        <h3>FRONTEND</h3>
+        <div>
+          <img src="img/html.png" alt="html" loading="lazy" />
+          <img src="img/css.png" alt="css" loading="lazy" />
+          <img src="img/js.png" alt="js" loading="lazy" />
+        </div>
+        <h3>UX/UI</h3>
+        <div>
+          <img src="img/figma.png" alt="figma" loading="lazy" />
+          <img src="img/maze.jpeg" alt="maze" loading="lazy" />
+          <img src="img/miro.jpeg" alt="miro" loading="lazy" />
+          <img src="img/whimsical.png" alt="whimsical" loading="lazy" />
+          <img src="img/zeplin.png" alt="zeplin" loading="lazy" />
+        </div>
+        <h3>CONTROL DE VERSIONES</h3>
+        <div>
+          <img src="img/git.png" alt="git" loading="lazy" />
+          <img src="img/github.png" alt="github" loading="lazy" />
+        </div>
+        <h3>ESTOY APRENDIENDO:</h3>
+        <ul>
+          <li>Curso Domestka: copywriting para copywriters</li>
+          <li>
+            Curso Domestika: creación de una web profesional con wordPress
+          </li>
+        </ul>
+      </section>
+      <!-- sección6 -->
+      <section class="section section6" id="section6">
+        <div class="contacto">
+          <h2>Contáctame!</h2>
+          <div>
+            <img src="img/was.png" alt="was" loading="lazy" />
+            <p>646380866</p>
+          </div>
+          <div>
+            <img src="img/email.png" alt="correo" loading="lazy" />
+            <p>andresbonxe@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer">
+          <p>Este sitio web está desarrollado con:</p>
+          <img src="img/html.png" alt="html" loading="lazy" />
+          <img src="img/css.png" alt="css" loading="lazy" />
+          <img src="img/js.png" alt="js" loading="lazy" />
+        </div>
+      </section>
+    </main>
+    <script src="script/script.js" defer></script>
+  </body>
+</html>

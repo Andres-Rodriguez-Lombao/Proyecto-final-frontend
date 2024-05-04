@@ -1,0 +1,489 @@
+/* importo fuente */
+@font-face {
+  font-family: "Rowdies";
+  src: url(../fonts/Rowdies/Rowdies-Regular.ttf);
+}
+
+/* Reset CSS y pongo color de fondo */
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #e4dfec;
+  font-family: "Rowdies";
+}
+
+/* header */
+/* creo un menu que ocupe toda la pantalla verticalmente y 23vw a nivel horizontal.
+Le quito el margen y el padding por defecto y le doy un position fixed para que puedan ir al lado las secciones.
+Además añado un display flex para poder centrar en ambos ejes los elementos contenidos. Por último le doy un color de fondo */
+menu {
+  height: 100vh;
+  width: 23vw;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282828;
+}
+
+@media (max-width: 480px) {
+  menu {
+    height: 15vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828;
+  }
+}
+
+/* quito el estilo de lista y el margin y padding por defecto. Centro el texto */
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin: 0rem 2rem;
+  }
+}
+
+/* añado margen entre los elementos de la lista */
+.lista__li {
+  margin: 1rem 0rem;
+}
+
+.lista__li--fantasma {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .lista__li--fantasma {
+    display: flex;
+    font-size: 2rem;
+    color: #cc37ed;
+  }
+}
+
+/* trabajo con la imagen de la lista */
+.fotoPerfil {
+  width: 10rem;
+  border: 5px solid #00e1e1;
+  border-radius: 100rem;
+}
+
+@media (max-width: 768px) {
+  .fotoPerfil {
+    width: 8rem;
+    border: 4px solid #00e1e1;
+  }
+}
+
+@media (max-width: 480px) {
+  .fotoPerfil {
+    width: 4rem;
+    border: 3px solid #00e1e1;
+  }
+}
+
+.fotoPerfil:hover {
+  box-shadow: 3px 3px 3px #cc37ed;
+}
+
+/* quito la decoración de los enlaces y les cambio el color. Le doy un color al hover */
+.lista__a {
+  text-decoration: none;
+  color: #e4dfec;
+}
+
+/* clase para JS */
+.lista__a--scroll {
+  color: #cc37ed;
+}
+
+.lista__a:hover {
+  color: #cc37ed;
+}
+
+@media (max-width: 480px) {
+  .lista__a {
+    display: none;
+  }
+}
+
+/* main */
+/* Sección 1: para que ocupe toda la pentalla verticalmente y en horizontal empiece donde acaba el menú.
+Creo un display flex para poder colocar el contenido */
+.section1 {
+  height: 100vh;
+  margin: 0 0 0 23vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 4rem;
+}
+
+/* Sección 1: textos */
+.span0 {
+  color: #f75ae2;
+  text-shadow: 0.5px 0.5px 0.5px #00e1e1;
+  opacity: 100;
+  margin: 0;
+  animation-name: bienvenidos;
+  animation-duration: 150ms;
+  animation-iteration-count: infinite;
+}
+@keyframes bienvenidos {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.span1 {
+  color: #cc37ed;
+}
+
+/* Sección 1: botones */
+.section1__botones {
+  margin: 2rem 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.botonCv {
+  padding: 1rem;
+  background-color: #f75ae2;
+  color: #ffffff;
+  font-family: "Rowdies";
+  border: 1px solid #3a2c8b;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px #3a2c8b;
+  margin: 0 2rem 0 0;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .botonCv {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+}
+
+.section1__botones img {
+  width: 3%;
+  margin: 0.6rem;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .section1__botones img {
+    width: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section1__botones img {
+    width: 6%;
+  }
+}
+
+/* sección 2 */
+/* crea una sección con características similares a la anterior */
+.section2 {
+  height: 100vh;
+  max-width: 90vh;
+  margin: 0 0 0 23vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0rem 4rem;
+  line-height: 2.5rem;
+}
+
+@media (max-width: 480px) {
+  .section2 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    line-height: 1.5rem;
+  }
+}
+
+/* espaciado entre párrafos */
+.section2 p {
+  margin: 0 0 1rem 0;
+}
+
+/* sección 3 */
+/* crea una sección con características similares a la anterior */
+.section3 {
+  height: 100vh;
+  margin: 0 0 0 23vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0rem 4rem;
+}
+
+/* alineo la card y las flechas en horizontal */
+.proyecto {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* alineo el contenido de la card en vertical */
+.proyecto__interior {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #3a2c8b;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  width: 30vw;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .proyecto__interior {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyecto__interior {
+    width: 45vw;
+  }
+}
+
+/* trabajo flechas*/
+.flecha {
+  margin: 5rem;
+  font-size: 3rem;
+  color: #f75ae2;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .flecha {
+    margin: 1rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flecha {
+    margin: 2rem;
+    font-size: 3rem;
+  }
+}
+
+.flecha:hover {
+  text-shadow: 2px 2px 2px #3a2c8b;
+}
+
+/* imagen */
+.imagenProyecto {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+/* textos card */
+.proyecto__interior h3 {
+  color: #cc37ed;
+}
+
+@media (max-width: 480px) {
+  .proyecto__interior h3 {
+    color: #cc37ed;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyecto__interior h3 {
+    color: #cc37ed;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.section3__texto1 {
+  width: 90%;
+  text-align: left;
+  margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  #texto1 {
+    font-size: 0.8rem;
+  }
+}
+
+/* div tecnologías */
+.tecnologias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tecnologias img {
+  width: 7%;
+  margin: 1rem;
+}
+
+/* sección 4 */
+.section4 {
+  height: 100vh;
+  margin: 0 0 0 23vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 4rem;
+}
+
+/* textos */
+.section4 h3 {
+  color: #3a2c8b;
+}
+
+.section4 p {
+  color: #f75ae2;
+}
+
+/* sección5 */
+.section5 {
+  height: 100vh;
+  margin: 0 0 0 23vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 4rem;
+}
+
+.section5 div {
+  margin: 0 0 0.5rem 0;
+}
+
+/* imagenes */
+.section5 img {
+  width: 3rem;
+  margin: 0 1rem 0 0;
+}
+
+@media (max-width: 480px) {
+  .section5 img {
+    width: 1.5rem;
+  }
+}
+
+/* textos */
+.section5 h3 {
+  color: #3a2c8b;
+}
+
+.section5 li {
+  color: #3a2c8b;
+  margin: 0 0 0.8rem 0;
+}
+
+.section6 {
+  height: 100vh;
+  margin: 0 0 0 23vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0rem 4rem;
+}
+
+/* contacto */
+.contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+
+.contacto img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 2rem 0 0;
+}
+
+/* footer*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 0rem;
+  border-top: 1px solid #282828;
+}
+.footer p {
+  color: #282828;
+}
+
+.footer img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0rem 0.5rem;
+}
+
+/* Características comunes a todas las secciones */
+h2,
+h1 {
+  font-size: 3rem;
+  color: #cc37ed;
+  margin: 1rem 0rem;
+}
+
+section p {
+  color: #3a2c8b;
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .section {
+    margin-left: 0rem;
+    padding: 0rem 2rem;
+  }
+  .section p {
+    font-size: 0.8rem;
+  }
+}
